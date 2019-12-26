@@ -22,6 +22,7 @@ module.exports = {
   },
 
   plugins: [
+    // Sanity source plugin config
     {
       use: 'gridsome-source-sanity',
       options: {
@@ -30,6 +31,20 @@ module.exports = {
         token: process.env.SANITY_TOKEN,
         overlayDrafts: !isProd,
         watchMode: !isProd
+      }
+    },
+    // Flexsearch plugin config
+    {
+      use: 'gridsome-plugin-flexsearch',
+      options: {
+        collections: [
+          {
+            typeName: 'Sanity',
+            indexName: 'Sanity',
+            fields: ['title']
+          }
+        ],
+        searchFields: ['title']
       }
     }
     /* {
