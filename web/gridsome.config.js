@@ -14,6 +14,7 @@ const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = {
   siteName: 'Gridsome Blog Starter',
+  siteUrl: 'localhost:8080',
   siteDescription:
     'A simple, hackable & minimalistic starter for Gridsome that uses structured content from Sanity.io.',
 
@@ -50,6 +51,13 @@ module.exports = {
           }
         ],
         searchFields: ['title', 'tags', 'body.children']
+      }
+    },
+    // Sitemap plugin
+    {
+      use: '@gridsome/plugin-sitemap',
+      options: {
+        cacheTime: 600000, // default
       }
     }
     /* {

@@ -1,4 +1,12 @@
-# Blog with Gridsome
+# My docs
+
+## Gridsome Plugins Included
+
+### @gridsome/plugin-sitemap
+
+Make sure to add the appropriate `siteUrl` to [gridsome.config.js](https://gridsome.org/docs/config/#siteurl). More complete documentation on the plugin can be found [here](https://gridsome.org/plugins/@gridsome/plugin-sitemap).
+
+# Sanity Starter Docs - Blog with Gridsome
 
 _Fully customizable blog template with a Vue.js front-end._
 
