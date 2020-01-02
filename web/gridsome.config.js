@@ -39,12 +39,17 @@ module.exports = {
       options: {
         collections: [
           {
-            typeName: 'Sanity',
-            indexName: 'Sanity',
-            fields: ['title']
+            typeName: 'SanityPost',
+            indexName: 'SanityPost',
+            fields: ['title', 'tags', 'body.children']
+          },
+          {
+            typeName: 'Search',
+            indexName: 'Search',
+            fields: ['title', 'id']
           }
         ],
-        searchFields: ['title']
+        searchFields: ['title', 'tags', 'body.children']
       }
     }
     /* {
@@ -69,3 +74,16 @@ module.exports = {
     } */
   ]
 }
+
+const fs = require('fs')
+
+let student = { 
+  name: 'Bike',
+  age: 23, 
+  gender: 'Male',
+  department: 'English',
+  car: 'Honda' 
+}
+
+let data = JSON.stringify(student)
+fs.writeFileSync('static/students.json', data)

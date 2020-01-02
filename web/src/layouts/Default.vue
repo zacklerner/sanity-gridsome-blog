@@ -7,6 +7,7 @@
 
       <div class="header__right">
         <toggle-theme />
+        <search-field />
       </div>
     </header>
 
@@ -28,6 +29,7 @@
 <script>
 import HeaderLogo from '~/components/HeaderLogo'
 import ToggleTheme from '~/components/ToggleTheme'
+import SearchField from '~/components/SearchField'
 
 export default {
   props: {
@@ -38,7 +40,8 @@ export default {
   },
   components: {
     HeaderLogo,
-    ToggleTheme
+    ToggleTheme,
+    SearchField
   }
 }
 </script>

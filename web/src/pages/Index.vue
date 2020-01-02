@@ -3,6 +3,9 @@
     <!-- Author intro -->
     <author-card :show-title="true" />
 
+    <!-- Search -->
+    <search-results />
+
     <!-- List posts -->
     <div class="posts">
       <post-card
@@ -35,6 +38,7 @@
           id
           title
         }
+        tags
         publishedAt(format: "D. MMMM YYYY")
         _rawExcerpt
         mainImage {
@@ -67,11 +71,13 @@
 <script>
 import AuthorCard from '~/components/AuthorCard'
 import PostCard from '~/components/PostCard'
+import SearchResults from '~/components/SearchResults'
 
 export default {
   components: {
     AuthorCard,
-    PostCard
+    PostCard,
+    SearchResults
   },
   metaInfo: {
     title: 'Hello, world!'

@@ -76,6 +76,7 @@ query Post ($id: ID!) {
       id
       title
     }
+    tags
     _rawExcerpt
     _rawBody
     mainImage {
