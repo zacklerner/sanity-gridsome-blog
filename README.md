@@ -4,7 +4,19 @@
 
 ### @gridsome/plugin-sitemap
 
-Make sure to add the appropriate `siteUrl` to [gridsome.config.js](https://gridsome.org/docs/config/#siteurl). More complete documentation on the plugin can be found [here](https://gridsome.org/plugins/@gridsome/plugin-sitemap).
+You'll probably need to generate a sitemap for your site, but feel free to remove this if you don't! Make sure to add the appropriate `siteUrl` to [gridsome.config.js](https://gridsome.org/docs/config/#siteurl). More complete documentation on the plugin can be found [here](https://gridsome.org/plugins/@gridsome/plugin-sitemap).
+
+### @gridsome/plugin-flexsearch
+
+Solid integration of FlexSearch.js with Gridsome. Flexsearch currently has limited support for search within nested data structures. In order to properly search Sanity's implementation of Portable Text blocks will have to be flattened and stored in a custom index for the time being. This is a top priority on the [roadmap for this base theme](#roadmap).
+
+More complete documentation on the plugin can be found [here](https://gridsome.org/plugins/gridsome-plugin-flexsearch)
+
+## Roadmap
+
+1. Warn if siteUrl not set or prompt for siteUrl on installation
+
+---
 
 # Sanity Starter Docs - Blog with Gridsome
 
