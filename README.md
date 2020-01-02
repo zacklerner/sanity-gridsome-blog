@@ -14,7 +14,8 @@ More complete documentation on the plugin can be found [here](https://gridsome.o
 
 ## Roadmap
 
-1. Warn if siteUrl not set or prompt for siteUrl on installation
+1. Flatten portable text blocks for indexing
+2. Warn if siteUrl not set or prompt for siteUrl on installation
 
 ---
 
