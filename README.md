@@ -12,10 +12,26 @@ Solid integration of FlexSearch.js with Gridsome. Flexsearch currently has limit
 
 More complete documentation on the plugin can be found [here](https://gridsome.org/plugins/gridsome-plugin-flexsearch)
 
+## Adding a new type of content
+
+1. Add schema in studio/schemas/documents or studio/schemas/objects: https://www.sanity.io/docs/content-modelling
+2. Add your new schema to studio/schemas/schema.js
+3. Update studio/deskStructure.js making sure to add the name of your schema to hidden doc types if a document (optional)
+4. Add a template component for your new content in web/source/templates with the appropriate GraphQL query
+5. Add the template for your collection to gridsome.config.js: https://gridsome.org/docs/templates/
+6. Add the collection to flexsearch's configuration in gridsome.config.js: https://gridsome.org/plugins/gridsome-plugin-flexsearch
+
+## Menus
+
+Link lists have been added to the starter theme in the form of 
+
 ## Roadmap
 
 1. Flatten portable text blocks for indexing
 2. Warn if siteUrl not set or prompt for siteUrl on installation
+3. Move this roadmap to a github project a la https://github.com/gridsome/gridsome/projects/2
+4. Implement page transitions
+5. Add test user access control to Sanity Studio: https://www.sanity.io/docs/access-control
 
 ---
 

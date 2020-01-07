@@ -15,7 +15,7 @@
       <post-meta class="post-card__meta" :post="post" />
       <post-tags class="post-card__tags" :post="post" />
 
-      <g-link class="post-card__link" :to="post.slug.current">Link</g-link>
+      <g-link class="post-card__link" :to="'/blog/' + post.slug.current">Link</g-link>
     </div>
   </div>
 </template>

@@ -11,6 +11,13 @@
       </div>
     </header>
 
+    <nav class="menu__main">
+      <!-- Test Menu -->
+      <div class="menu">
+        <link-list :menu="$static.menu" />
+      </div>
+    </nav>
+
     <main class="main">
       <slot />
     </main>
@@ -26,10 +33,29 @@
   </div>
 </template>
 
+<static-query>
+{
+  menu: sanityMenu(id: "mainNav") {
+    menuItems {
+      _key
+      menuTitle
+      menuLink {
+        pageReference {
+          id
+          path
+          title
+        }
+      }
+    }
+  }
+}
+</static-query>
+
 <script>
 import HeaderLogo from '~/components/HeaderLogo'
 import ToggleTheme from '~/components/ToggleTheme'
 import SearchField from '~/components/SearchField'
+import LinkList from '~/components/LinkList'
 
 export default {
   props: {
@@ -41,7 +67,8 @@ export default {
   components: {
     HeaderLogo,
     ToggleTheme,
-    SearchField
+    SearchField,
+    LinkList
   }
 }
 </script>

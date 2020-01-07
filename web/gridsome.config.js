@@ -19,7 +19,8 @@ module.exports = {
     'A simple, hackable & minimalistic starter for Gridsome that uses structured content from Sanity.io.',
 
   templates: {
-    SanityPost: '/:slug__current'
+    SanityPost: '/blog/:slug__current',
+    SanityPage: '/:slug__current'
   },
 
   plugins: [
@@ -43,6 +44,11 @@ module.exports = {
             typeName: 'SanityPost',
             indexName: 'SanityPost',
             fields: ['title', 'tags', 'body.children']
+          },
+          {
+            typeName: 'SanityPage',
+            indexName: 'SanityPage',
+            fields: ['title', 'body.children']
           },
           {
             typeName: 'Search',
