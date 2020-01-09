@@ -18,6 +18,8 @@
         :blocks="$page.page._rawBody"
         v-if="$page.page._rawBody"
       />
+
+      <FormContact v-if="$page.page.path == '/contact/'" />
       
     </div>
   </Layout>
@@ -25,10 +27,12 @@
 
 <script>
 import BlockContent from '~/components/BlockContent'
+import FormContact from '~/components/FormContact'
 
 export default {
   components: {
-    BlockContent
+    BlockContent,
+    FormContact
   },
   metaInfo() {
     return {
@@ -56,6 +60,7 @@ query Page ($id: ID!) {
   page: sanityPage (id: $id) {
     title
     _rawBody
+    path
     mainImage {
       asset {
         _id

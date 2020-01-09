@@ -6,15 +6,21 @@
       class="input"
       type="text"
       placeholder="Search">
-    {{ searchResults }}
+      <ul class="search-results">
+        <li v-for="searchResult in searchResults" :key="searchResult.id">
+          <p><a :href="searchResult.path">{{ searchResult.title }}</a></p>
+        </li>
+      </ul>
   </div>
 </template>
 
 <script>
 export default {
-  data: () => ({
-    searchTerm: ''
-  }),
+  data() {
+    return {
+      searchTerm: ''
+    }
+  },
   computed: {
     searchResults () {
       const searchTerm = this.searchTerm
