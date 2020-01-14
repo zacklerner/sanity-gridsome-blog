@@ -1,9 +1,10 @@
 import S from '@sanity/desk-tool/structure-builder'
 import MdSettings from 'react-icons/lib/md/settings'
 import MdPerson from 'react-icons/lib/md/person'
+import FaRecycle from 'react-icons/lib/fa/recycle'
 
 const hiddenDocTypes = listItem =>
-  !['category', 'author', 'menu', 'post', 'page', 'siteSettings'].includes(listItem.getId())
+  !['category', 'author', 'menu', 'post', 'page', 'siteSettings', 'reusableContentCta'].includes(listItem.getId())
 
 export default () =>
   S.list()
@@ -48,6 +49,22 @@ export default () =>
         .title('Pages')
         .schemaType('page')
         .child(S.documentTypeList('page').title('Pages')),
+      S.listItem()
+        .title('Reusable Content Blocks')
+        .icon(FaRecycle)
+        .child(
+          S.list()
+            .title('Reusable Content Blocks')
+            .items([
+              S.listItem()
+                .title('CTAs')
+                .child(S.documentTypeList('reusableContentCta').title('CTAs')),
+              S.listItem()
+                .title('Sliders'),
+              S.listItem()
+                .title('Forms')
+            ])
+        ),
       S.listItem()
         .title('Authors')
         .icon(MdPerson)

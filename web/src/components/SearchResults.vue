@@ -9,6 +9,12 @@
       <ul class="search-results">
         <li v-for="searchResult in searchResults" :key="searchResult.id">
           <p><a :href="searchResult.path">{{ searchResult.title }}</a></p>
+          <ul v-if="searchResult.tags.length">
+            <li v-for="tag in JSON.parse(searchResult.tags)" :key="tag">{{ tag }}</li>
+          </ul>
+          <div v-if="searchResult.body.length">
+            {{ searchResult.body }}
+          </div>
         </li>
       </ul>
   </div>

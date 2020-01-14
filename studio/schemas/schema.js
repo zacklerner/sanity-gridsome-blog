@@ -10,6 +10,7 @@ import category from './documents/category'
 import menu from './documents/menu'
 import page from './documents/page'
 import post from './documents/post'
+import reusableContentCta from './documents/reusableContentCta'
 import siteSettings from './documents/siteSettings'
 
 // Object types
@@ -19,6 +20,7 @@ import excerptPortableText from './objects/excerptPortableText'
 import mainImage from './objects/mainImage'
 import pageReference from './objects/pageReference'
 import authorReference from './objects/authorReference'
+import reusableContentCtaReference from './objects/reusableContentCtaReference'
 import menuReference from './objects/menuReference'
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -31,6 +33,7 @@ export default createSchema({
     // The following are document types which will appear
     // in the studio.
     siteSettings,
+    reusableContentCta,
     menu,
     post,
     page,
@@ -38,6 +41,7 @@ export default createSchema({
     author,
     mainImage,
     authorReference,
+    reusableContentCtaReference,
     bodyPortableText,
     bioPortableText,
     excerptPortableText,

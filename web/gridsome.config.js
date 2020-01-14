@@ -41,22 +41,17 @@ module.exports = {
       options: {
         collections: [
           {
-            typeName: 'SanityPost',
-            indexName: 'SanityPost',
-            fields: ['title', 'tags', 'body.children']
-          },
-          {
-            typeName: 'SanityPage',
-            indexName: 'SanityPage',
-            fields: ['title', 'body.children']
-          },
-          {
             typeName: 'Search',
             indexName: 'Search',
             fields: ['title', 'id']
+          },
+          {
+            typeName: 'SanityFlatIndex',
+            indexName: 'SanityFlatIndex',
+            fields: ['title', 'id', 'path', 'tags', 'body']
           }
         ],
-        searchFields: ['title', 'tags', 'body.children']
+        searchFields: ['title', 'tags', 'body']
       }
     },
     // Sitemap plugin
@@ -88,16 +83,3 @@ module.exports = {
     } */
   ]
 }
-
-const fs = require('fs')
-
-let student = { 
-  name: 'Bike',
-  age: 23, 
-  gender: 'Male',
-  department: 'English',
-  car: 'Honda' 
-}
-
-let data = JSON.stringify(student)
-fs.writeFileSync('static/students.json', data)
