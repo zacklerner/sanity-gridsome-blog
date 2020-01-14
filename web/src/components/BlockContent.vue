@@ -31,6 +31,9 @@ export default {
               />
               <figcaption>{node.caption}</figcaption>
             </figure>
+          ),
+          reusableContentCtaReference: ({ node }) => (
+            <div>Content Goes Here</div>
           )
         }
       }
