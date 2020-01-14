@@ -33,7 +33,10 @@ export default {
             </figure>
           ),
           reusableContentCtaReference: ({ node }) => (
-            <div>Content Goes Here</div>
+            <div>CTA Ref</div>
+          ),
+          authorReference: ({ node }) => (
+            <div>Author Ref</div>
           )
         }
       }
