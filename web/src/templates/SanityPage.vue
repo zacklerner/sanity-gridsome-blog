@@ -19,7 +19,7 @@
         v-if="$page.page._rawBody"
       />
 
-      <FormContact v-if="$page.page.path == '/contact/'" />
+      <!-- <FormContact v-if="$page.page.path == '/contact/'" /> -->
       
     </div>
   </Layout>
