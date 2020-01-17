@@ -3,9 +3,6 @@
     <!-- Author intro -->
     <author-card :show-title="true" />
 
-    <!-- Search -->
-    <search-results />
-
     <!-- List posts -->
     <div class="posts">
       <post-card
@@ -71,13 +68,11 @@
 <script>
 import AuthorCard from '~/components/AuthorCard'
 import PostCard from '~/components/PostCard'
-import SearchResults from '~/components/SearchResults'
 
 export default {
   components: {
     AuthorCard,
-    PostCard,
-    SearchResults
+    PostCard
   },
   metaInfo: {
     title: 'Hello, world!'

@@ -7,16 +7,17 @@
 
       <div class="header__right">
         <toggle-theme />
-        <search-field />
       </div>
     </header>
-
-    <nav class="menu__main">
-      <!-- Test Menu -->
+    
+    <!-- <nav class="menu__main">
       <div class="menu">
         <link-list :menu="$static.menu" />
       </div>
-    </nav>
+    </nav> -->
+
+    <!-- Search -->
+    <search-results />
 
     <main class="main">
       <slot />
@@ -54,8 +55,8 @@
 <script>
 import HeaderLogo from '~/components/HeaderLogo'
 import ToggleTheme from '~/components/ToggleTheme'
-import SearchField from '~/components/SearchField'
 import LinkList from '~/components/LinkList'
+import SearchResults from '~/components/SearchResults'
 
 export default {
   props: {
@@ -67,7 +68,7 @@ export default {
   components: {
     HeaderLogo,
     ToggleTheme,
-    SearchField,
+    SearchResults,
     LinkList
   }
 }
