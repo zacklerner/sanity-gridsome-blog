@@ -13,6 +13,7 @@
     "dotenv": "^8.1.0",
     "gridsome": "^0.7.12",
     "gridsome-plugin-flexsearch": "^0.1.10",
+    "gridsome-source-google-sheets": "^0.3.1",
     "gridsome-source-sanity": "^1.0.4",
     "sanity-blocks-vue-component": "^0.1.0"
   },
