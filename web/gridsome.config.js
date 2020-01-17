@@ -41,11 +41,6 @@ module.exports = {
       options: {
         collections: [
           {
-            typeName: 'Search',
-            indexName: 'Search',
-            fields: ['title', 'id']
-          },
-          {
             typeName: 'SanityFlatIndex',
             indexName: 'SanityFlatIndex',
             fields: ['title', 'id', 'path', 'tags', 'body']
@@ -61,25 +56,5 @@ module.exports = {
         cacheTime: 600000, // default
       }
     }
-    /* {
-      // Create posts from markdown files
-      use: '@gridsome/source-filesystem',
-      options: {
-        typeName: 'Post',
-        path: 'content/posts/*.md',
-        route: '/:slug',
-        refs: {
-          // Creates a GraphQL collection from 'tags' in front-matter and adds a reference.
-          tags: {
-            typeName: 'Tag',
-            route: '/tag/:id',
-            create: true
-          }
-        }
-      },
-      {
-
-      }
-    } */
   ]
 }
