@@ -35,6 +35,24 @@ module.exports = {
         watchMode: !isProd
       }
     },
+    // Google Sheets source plugin configuration for zone sheet
+    {
+      use: 'gridsome-source-google-sheets',
+      options: {
+        sheetId: process.env.GOOGLE_ZONE_SHEET_ID, 
+        apiKey: process.env.GOOGLE_API_KEY,
+        type: 'lpwZones' //Optional - default is googleSheet. Used for graphql queries.
+      }
+    },
+    // Google Sheets source plugin configuration for inventory sheet
+    {
+      use: 'gridsome-source-google-sheets',
+      options: {
+        sheetId: process.env.GOOGLE_INVENTORY_SHEET_ID, 
+        apiKey: process.env.GOOGLE_API_KEY,
+        type: 'lpwInventory' //Optional - default is googleSheet. Used for graphql queries.
+      }
+    },
     // Flexsearch plugin config
     {
       use: 'gridsome-plugin-flexsearch',
@@ -55,6 +73,10 @@ module.exports = {
       options: {
         cacheTime: 600000, // default
       }
+    },
+    // Import base components globally
+    {
+        use: 'gridsome-plugin-base-components'
     }
   ]
 }

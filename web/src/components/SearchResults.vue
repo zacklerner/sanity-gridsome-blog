@@ -34,7 +34,6 @@ export default {
     searchResults () {
       const searchTerm = this.searchTerm
       if (searchTerm.length < 3) return []
-      console.log(this.$search.search({ query: searchTerm, limit: 5 }))
       return this.$search.search({ query: searchTerm, limit: 5, suggest: true })
     }
   }

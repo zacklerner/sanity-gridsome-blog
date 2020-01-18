@@ -21,6 +21,11 @@
 
       <!-- <FormContact v-if="$page.page.path == '/contact/'" /> -->
       
+      <ProductInventory v-if="$page.page.path == '/inventory/'" />
+
+      <MapZones v-if="$page.page.path == '/zones/'" />
+      
+      
     </div>
   </Layout>
 </template>
@@ -28,11 +33,15 @@
 <script>
 import BlockContent from '~/components/BlockContent'
 import FormContact from '~/components/FormContact'
+import ProductInventory from '~/components/ProductInventory'
+import MapZones from '~/components/MapZones'
 
 export default {
   components: {
     BlockContent,
-    FormContact
+    FormContact,
+    ProductInventory,
+    MapZones
   },
   metaInfo() {
     return {

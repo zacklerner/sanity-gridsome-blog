@@ -12,6 +12,7 @@
     "@sanity/image-url": "^0.140.15",
     "dotenv": "^8.1.0",
     "gridsome": "^0.7.12",
+    "gridsome-plugin-base-components": "0.0.12",
     "gridsome-plugin-flexsearch": "^0.1.10",
     "gridsome-source-google-sheets": "^0.3.1",
     "gridsome-source-sanity": "^1.0.4",
