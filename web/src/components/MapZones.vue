@@ -16,7 +16,9 @@ query {
       node {
         id
         Zone_Name
-        Zone_Zips
+        Zips_Included
+        Shipping_Details
+        Zips_Excluded
       }
     }
   }

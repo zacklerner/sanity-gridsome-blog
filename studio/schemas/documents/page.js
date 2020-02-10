@@ -22,7 +22,7 @@ export default {
     {
       name: 'mainImage',
       type: 'mainImage',
-      title: 'Main Imag'
+      title: 'Main Image'
     },
     {
       name: 'body',
