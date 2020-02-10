@@ -10,8 +10,9 @@ export default () =>
   S.list()
     .title('Content')
     .items([
+      S.divider(),
       S.listItem()
-        .title('Settings')
+        .title('Site Settings')
         .icon(MdSettings)
         .child(
           S.editor()
@@ -19,6 +20,11 @@ export default () =>
             .schemaType('siteSettings')
             .documentId('siteSettings')
         ),
+      S.listItem()
+        .title('Header'),
+      S.listItem()
+        .title('Footer'),
+      S.divider(),
       S.listItem()
         .title('Menus')
         .child(
@@ -49,6 +55,10 @@ export default () =>
         .title('Pages')
         .schemaType('page')
         .child(S.documentTypeList('page').title('Pages')),
+      S.listItem()
+        .title('Products'),
+      S.listItem()
+        .title('Sea Stories'),
       S.listItem()
         .title('Reusable Content Blocks')
         .icon(FaRecycle)
